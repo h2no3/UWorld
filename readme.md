@@ -19,3 +19,14 @@
 ### Todo
 
 见**issues**
+
+### Project Structure
+- src : 存放相关源代码
+  - game : 游戏主体
+  - editor : 人物/地图编辑器
+- res : 存放各类资源
+  - audio : 音频资源
+  - img : 图片资源
+- unit : 存放杂七杂八的东西
+  - src : 待整合的代码(功能测试)
+  - res : 待整合的资源(音频/图片)
