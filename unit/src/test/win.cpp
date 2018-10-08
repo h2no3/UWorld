@@ -46,16 +46,17 @@ void DrawTest(sf::RenderWindow& win)
     win.draw(text_sprite);
 
     //Generate a Shape Sprite
-    sf::Sprite shape_sprite;
+    sf::Sprite png_sprite;
 
     renderTexture.clear();
     renderTexture.draw(shape);
     renderTexture.display();
 
-    sf::Texture s = renderTexture.getTexture();
-    shape_sprite.setTexture(s);
-
-    win.draw(shape_sprite);
+    sf::Texture s;
+    s.loadFromFile("../../res/test.png");
+    png_sprite.setTexture(s);
+    png_sprite.scale(10.5f,10.5f);
+    win.draw(png_sprite);
     win.display();
 }
 
