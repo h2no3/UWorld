@@ -47,6 +47,7 @@ void DrawTest(sf::RenderWindow& win)
 
     //Generate a Shape Sprite
     sf::Sprite png_sprite;
+    sf::Sprite png_sprite_2;
 
     renderTexture.clear();
     renderTexture.draw(shape);
@@ -56,7 +57,12 @@ void DrawTest(sf::RenderWindow& win)
     s.loadFromFile("../../res/test.png");
     png_sprite.setTexture(s);
     png_sprite.scale(10.5f,10.5f);
+
+    png_sprite_2.setTexture(s);
+    png_sprite_2.scale(10.5f,10.5f);
+    png_sprite_2.setPosition(135,135);
     win.draw(png_sprite);
+    win.draw(png_sprite_2);
     win.display();
 }
 

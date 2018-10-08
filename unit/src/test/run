@@ -1,3 +1,4 @@
 #!/bin/bash
 g++ ${1} -std=c++11 -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio
 ./a.out
+rm a.out
