@@ -56,19 +56,31 @@ void DrawTest(sf::RenderWindow& win)
     sf::Texture s;
     s.loadFromFile("../../res/test.png");
     png_sprite.setTexture(s);
-    png_sprite.scale(10.5f,10.5f);
+    png_sprite.scale(10.0f,10.0f);
 
     png_sprite_2.setTexture(s);
-    png_sprite_2.scale(10.5f,10.5f);
-    png_sprite_2.setPosition(135,135);
-    win.draw(png_sprite);
-    win.draw(png_sprite_2);
+    png_sprite_2.scale(10.0f,10.0f);
+
+    int x = 0;
+    int y = 150;
+    for (int i = 0; i < 4; i++)
+    {
+        png_sprite.setPosition(x, y);
+        png_sprite_2.setPosition(y, x);
+
+        x += 150;
+        y += 150;
+
+        win.draw(png_sprite_2);
+        win.draw(png_sprite);
+    }
+
     win.display();
 }
 
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(800, 600), "My window");
+    sf::RenderWindow window(sf::VideoMode(1200, 1200), "My window");
 
     // run the program as long as the window is open
     while (window.isOpen())
